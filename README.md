@@ -1,8 +1,8 @@
 # Fundamentals
 
-OOP, DOM, SOLID, DRY
+## OOP, DOM, SOLID, DRY
 
-OOP
+## OOP
 
 Encapsulacion
 Se crean objetos con sus respectivas propiedades y metodos que estan dentro de este objeto. la idea es que las funciones dentro del objeto sean mas faciles de mantener
@@ -16,10 +16,12 @@ se definen propiedades y metodos de un "padre" y luego estas van a ser heredadas
 Poliformismo
 Las funciones las cuales son heredadas del "padre" pueden comportarse de formas diferentes dependiendo del "hijo" que las llame
 
-DOM
+## DOM
+
 La forma en la que javascript puede acceder al documento HTML como si estos fueran nodos y objetos.
 
-SOLID
+## SOLID
+
 Una serie de practicas para codear mas limpiamente.
 S. Responsibilidad unica: cada parte del codigo se encarga de una sola cosa como añadir, borrar, modificar, etc..
 O. Abierto cerrado: una clase debe tener la posibilidad de poder añadirle metodos nuevos en lugar de moficar codigo existente
@@ -28,6 +30,7 @@ I. Segregacion de interfaz: las interfaces que se crean deben tener una finalida
 D. Inversion de dependencias: deberia usarse mas abstracciones que clases completas.
 Deberia crearse una clase la cual tenga unicamente nombre de las funciones y lo que recibiran, luego en otra capa otra clase que extienda a la primera y en la cual se defina la logica y finalmente otra capa que heredara todo lo de la anterior. De esta manera el codigo será mas flexible
 
-DRY
+## DRY
+
 Dont repeat yourself.
 Si algo se usa mas de una vez y funciona igual dentro de 2 lugares diferentes, lo mejor es crear una funcion que se pueda llamar varias veces
