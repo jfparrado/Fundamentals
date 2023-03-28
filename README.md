@@ -1,0 +1,2 @@
+# Fundamentals
+OOP, SOLID, DRY
