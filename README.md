@@ -42,10 +42,33 @@ tanto las respuestas como las peticiones se realizan a través de texto plano.
 
 HTTP2 es un protocolo binario que conserva la misma semántica que el protocolo HTTP1.X
 MULTIPLEXED STREAMS: enviamos muchas peticiones y respuestas diferentes a través de una misma conexión.
-SERVER PUSH: cuando suple una página HTML puede enviar los archivos de CSS, imágenes o fuentes antes de que el navegador haya interpretado el contenido HTML y los solicite, así que cuando el navegador los necesita estos recursos disponibles de inmediato
+Como graphQL desde un prinicipio ya solo enviaba un request en http2 su mejora no fue significativa mientras que para REST si.
+
+SERVER PUSH: cuando suple una página HTML puede enviar los archivos de CSS, imágenes o fuentes antes de que el navegador haya interpretado el contenido HTML y los solicite, así que cuando el navegador los necesita estos recursos disponibles de inmediato.
+En el rendimiento ambos se vieron beneficiados
+
 COMPRESION DE HEADERS: todas las cabeceras se empaquetan en un solo bloque comprimido para ser enviados como una unidad. Se envían y una vez finalizada la transmisión, se decodifica el bloque de cabeceras del otro lado.
+Con graphQL puede que su formato no este soportado mientras que REST se ve mas beneficiado ya que no hay problemas con json o xml
+
 FORMATO BINARIO EN LUGAR DE TEXTO: Los protocolos binarios son más eficientes para interpretar, más compactos al ser transportados, y son mucho menos propenso a errores comparado con los protocolos basados en texto
 SEGURIDAD: Se usa la encriptacion TLS en todas las conexiones
+
+### GRAPHQL VS REST
+
+Traer la informacion:
+REST APIs requir+en muchos endpoints para traer la informacion, mientras GraphQL APIs permite traer la informacion exacta en una sola peticion
+
+Formato de respuesta:
+REST APIs regresan JSON o XML en un formato estandar, mientras GraphQL APIs regresan JSON en el formato que se les defina.
+
+Caching:
+REST APIs are easily cached because they rely on HTTP caching mechanisms, whereas GraphQL APIs can be more difficult to cache due to the dynamic nature of the data requests.
+
+Documentacion:
+REST APIs son documentedas usando herramientas como Swagger o OpenAPI, mientras GraphQL APIs incluyen auto documentacion facil de leer.
+
+Herramientas:
+REST APIs tienen muchas herramientas disponibles, incluyendo librerias del cliente, testeo y frameworks de testeo, mientras GraphQL tiene herramientas que hasta ahora estan siendo desarrolladas
 
 ## HTML mejores practicas
 
